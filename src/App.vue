@@ -1,30 +1,15 @@
-<template>
-  <div id="app">
-    <input type="password" v-model="pass">
-    <password-meter :password="pass" @score="onScore" />
-  </div>
-</template>
+<script lang="ts" setup>
+import { ref, type Ref } from 'vue'
+import PasswordMeter from './PasswordMeter.vue'
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import PasswordMeter from './password-meter.vue'
-export default defineComponent({
-  name: 'App',
-  components: {
-    PasswordMeter
-  },
-  data() {
-    return {
-      pass: ''
-    }
-  },
-  methods: {
-    onScore(score: { score: number, strength: string }) {
-      console.log(score)
-    }
-  }
-});
+const password: Ref<string> = ref('')
+
+const onScore = (score: { score: number; strength: string }) => {
+  console.log(score)
+}
 </script>
 
-<style>
-</style>
+<template>
+  <input type="password" v-model="password" />
+  <PasswordMeter :password="password" @score="onScore" />
+</template>

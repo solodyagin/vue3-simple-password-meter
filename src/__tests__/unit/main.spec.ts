@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
-import PasswordMeter from '@/password-meter.vue'
+import PasswordMeter from '@/PasswordMeter.vue'
 import { risky, guessable, weak, safe, secure, common } from '../password-examples'
-import {describe, it, expect} from 'vitest'
+import { describe, it, expect } from 'vitest'
 
 describe('password-meter.vue', () => {
   /**
@@ -10,8 +10,8 @@ describe('password-meter.vue', () => {
   it('renders and detects: risky', () => {
     const wrapper = shallowMount(PasswordMeter, {
       props: {
-        password: risky
-      }
+        password: risky,
+      },
     })
 
     expect(wrapper.classes()).toContain('risky')
@@ -23,8 +23,8 @@ describe('password-meter.vue', () => {
   it('renders and detects : guessable', () => {
     const wrapper = shallowMount(PasswordMeter, {
       props: {
-        password: guessable
-      }
+        password: guessable,
+      },
     })
 
     expect(wrapper.classes()).toContain('guessable')
@@ -36,8 +36,8 @@ describe('password-meter.vue', () => {
   it('renders and detects : weak', () => {
     const wrapper = shallowMount(PasswordMeter, {
       props: {
-        password: weak
-      }
+        password: weak,
+      },
     })
 
     expect(wrapper.classes()).toContain('weak')
@@ -49,8 +49,8 @@ describe('password-meter.vue', () => {
   it('renders and detects : safe', () => {
     const wrapper = shallowMount(PasswordMeter, {
       props: {
-        password: safe
-      }
+        password: safe,
+      },
     })
 
     expect(wrapper.classes()).toContain('safe')
@@ -62,8 +62,8 @@ describe('password-meter.vue', () => {
   it('renders and detects : secure', () => {
     const wrapper = shallowMount(PasswordMeter, {
       props: {
-        password: secure
-      }
+        password: secure,
+      },
     })
 
     expect(wrapper.classes()).toContain('secure')
@@ -75,11 +75,10 @@ describe('password-meter.vue', () => {
   it('renders and detects : common', () => {
     const wrapper = shallowMount(PasswordMeter, {
       props: {
-        password: common
-      }
+        password: common,
+      },
     })
 
     expect(wrapper.classes()).toContain('risky')
-  });
-
+  })
 })
