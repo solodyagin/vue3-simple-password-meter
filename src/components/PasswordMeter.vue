@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { checkStrength, scorePassword } from './logic'
+import { checkStrength, scorePassword } from '@/logic'
 
 const props = defineProps({
   password: String,

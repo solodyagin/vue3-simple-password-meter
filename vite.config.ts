@@ -15,7 +15,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: 'src/lib.ts',
+      entry: 'src/index.ts',
       name: 'vue3-simple-password-meter',
       fileName: 'vue3-simple-password-meter',
     },

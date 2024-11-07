@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import PasswordMeter from '@/PasswordMeter.vue'
+import PasswordMeter from '@/components/PasswordMeter.vue'
 import { risky, guessable, weak, safe, secure, common } from '../password-examples'
 import { describe, it, expect } from 'vitest'
 

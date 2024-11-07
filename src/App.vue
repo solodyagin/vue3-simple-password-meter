@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, type Ref } from 'vue'
-import PasswordMeter from './PasswordMeter.vue'
+import PasswordMeter from '@/components/PasswordMeter.vue'
 
 const password: Ref<string> = ref('')
 
